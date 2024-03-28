@@ -78,8 +78,8 @@ const Vitalsign = require('../model/vitalsign.server.model');
   // Export resolvers
   module.exports = {
   
-    // updateStudent,
-    // deleteStudent,
+    // updatePatient,
+    // deletePatient,
     deleteVitalsign,
     updateVitalsign
   }

@@ -1,9 +1,10 @@
 //vitalsign.server.model.js
 // Load the module dependencies
-const mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+
+const mongoose = require('mongoose');
+
 // Define a new 'vitalsignSchema'
-const vitalsignSchema = new Schema({
+const vitalsignSchema = new mongoose.Schema({
     patientId: { 
         type: String,
         required: [true, "Please add patientId"], 
@@ -33,7 +34,7 @@ const vitalsignSchema = new Schema({
       },
 });
 // Create the 'vitalsign' model out of the 'vitalsignSchema'
-const vitalsign = mongoose.model('vitalsign', vitalsignSchema); 
+const VitalsignModel = mongoose.model('Vitalsign', vitalsignSchema);
 
 // Export the 'vitalsign' model
-module.exports = vitalsign;
+module.exports = VitalsignModel;

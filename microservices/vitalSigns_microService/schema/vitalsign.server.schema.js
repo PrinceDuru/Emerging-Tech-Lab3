@@ -134,21 +134,21 @@ const {
             // Check if the Patient is logged in
             const token = context.req.cookies.token;
         
-            if (!token) {
-              console.log("Patient not authenticated");
-              throw new Error('Patient not authenticated');
+            // if (!token) {
+            //   console.log("Patient not authenticated");
+            //   throw new Error('Patient not authenticated');
               
-            }
+            // }
         
             try {
               // Verify the token to get the Patient ID
-              const decodedToken = jwt.verify(token, JWT_SECRET);
-              console.log('decodedToken:', decodedToken);
-              const patient = decodedToken._id;
-              console.log('patient:', patient)
+              // const decodedToken = jwt.verify(token, JWT_SECRET);
+              // console.log('decodedToken:', decodedToken);
+              // const patient = decodedToken._id;
+              // console.log('patient:', patient)
         
               // Continue with adding the vitalsign, including the patient
-              const vitalsignModel = new VitalsignModel({ patientId, bloodPressure, heartRate, temperature, respRate, patient});
+              const vitalsignModel = new VitalsignModel({ patientId, bloodPressure, heartRate, temperature, respRate/*, patient*/});
               const savedvitalsign = await vitalsignModel.save();
         
               return savedvitalsign;

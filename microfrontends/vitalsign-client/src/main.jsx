@@ -9,7 +9,8 @@ import { ApolloProvider } from '@apollo/client';
 //
 
 const link = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'http://localhost:4001/graphql',
+  // uri: 'http://localhost:4005//service-dictionary',
   credentials: 'include'
 });
 //

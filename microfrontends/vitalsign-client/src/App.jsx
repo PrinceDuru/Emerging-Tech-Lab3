@@ -10,7 +10,7 @@ import './App.css';
 import Home from './components/Home';
 // import AddStudent from './components/AddStudent';
 // import LoginStudent from './components/LoginStudent';
-// import AddCourse from './components/AddCourse';
+import AddVitalsign from './components/AddVitalsign';
 // import EditStudent from './components/EditStudent';
 // import EditCourse from './components/EditCourse';
 // import DeleteStudent from './components/DeleteStudent';
@@ -36,14 +36,14 @@ function App() {
               <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>
-              <Nav.Link as={Link} to="/createstudent">
-                Create Student
+              <Nav.Link as={Link} to="/createpatient">
+                Create Patient
               </Nav.Link>
-              <Nav.Link as={Link} to="/studentlist">
-                Student List
+              <Nav.Link as={Link} to="/patientlist">
+              Patient List
               </Nav.Link>
-              <Nav.Link as={Link} to="/addcourse">
-                Add Course
+              <Nav.Link as={Link} to="/addvitalsign">
+                Add Vitalsign
               </Nav.Link>
               <Nav.Link as={Link} to="/listvitalsigns">
                 List Vitalsigns
@@ -65,8 +65,8 @@ function App() {
           <Route path="createstudent" element={<AddStudent />} />
           <Route path = "editstudent/:id" element={<EditStudent />} />
           <Route path = "editcourse/:id" element={<EditCourse />} />
-          <Route path = "deletestudent/:id" element={<DeleteStudent />} />
-          <Route path="addcourse" element={<AddCourse />} /> */}
+          <Route path = "deletestudent/:id" element={<DeleteStudent />} /> */}
+          <Route path="addvitalsign" element={<AddVitalsign />} /> 
           <Route path="listvitalsigns" element={<ListVitalsigns />} />
           {/* <Route path="courseshome" element={<CoursesHome/>} />
           <Route path="deletecourse/:id" element={<DeleteCourse />} /> */}
